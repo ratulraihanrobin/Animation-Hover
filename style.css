@@ -1,19 +1,18 @@
-html {
-    block-size: 100%;
-    inline-size: 100%;
-  }
+
   body {
-    min-block-size: 100%;
-    min-inline-size: 100%;
     margin: 0;
     box-sizing: border-box;
-    display: grid;
-    place-content: center;
     font-family: system-ui, sans-serif;
+  }
+  .main_c{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
   }
   h1 {
     position: relative;
-    font-size: 5rem;
+    font-size: 4rem;
+    display: inline-block;
   }
   h1::before {
     content: " ";
@@ -29,7 +28,37 @@ html {
     transform: scaleX(0);
     transform-origin: bottom left;
   }
-  h1:hover::before {
+  .main_c .one h1:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.main_c .two h1::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.main_c .two h1:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom right;
+}
+
+.main_c .three h1::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.main_c .three h1:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.main_c .four h1::before {  
+  transform: scaleX(0);
+  transform-origin: bottom left;
+}
+
+.main_c .four h1:hover::before {
   transform: scaleX(1);
   transform-origin: bottom right;
 }
